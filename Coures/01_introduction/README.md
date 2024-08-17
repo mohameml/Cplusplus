@@ -1,15 +1,14 @@
-# cour 01 : **``introduction à C++``**
+# cour 01 : **`introduction à C++`**
 
+## 1. **`introduction à C++`**
 
-## 1. **``introduction à C++``**
+C++ est un langage de programmation polyvalent qui offre à la fois la programmation procédurale et la programmation orientée objet, ce qui en fait un outil puissant et flexible pour créer une variété d'applications, des logiciels système aux applications graphiques en passant par les jeux vidéo.
 
-La programmation en C++ est une compétence fondamentale dans le domaine de l'informatique et du développement logiciel. C++ est un langage de programmation polyvalent qui offre à la fois la programmation procédurale et la programmation orientée objet, ce qui en fait un outil puissant et flexible pour créer une variété d'applications, des logiciels système aux applications graphiques en passant par les jeux vidéo.
+-   **Introduction au C++ :**
 
-- **Introduction au C++ :**
+> Le C++ a été développé comme une extension du langage C, avec l'ajout de fonctionnalités orientées objet. Il a été créé par Bjarne Stroustrup au début des années 1980. Le langage a évolué au fil du temps pour inclure des fonctionnalités modernes tout en préservant une compatibilité avec le C.
 
->Le C++ a été développé comme une extension du langage C, avec l'ajout de fonctionnalités orientées objet. Il a été créé par Bjarne Stroustrup au début des années 1980. Le langage a évolué au fil du temps pour inclure des fonctionnalités modernes tout en préservant une compatibilité avec le C. 
-
-- **Caractéristiques principales du C++ :**
+-   **Caractéristiques principales du C++ :**
 
 1. **Orienté objet :** Le C++ prend en charge la programmation orientée objet, ce qui permet la création de classes et d'objets. Cette approche favorise la modularité, la réutilisabilité du code et facilite la gestion de projets complexes.
 
@@ -19,7 +18,7 @@ La programmation en C++ est une compétence fondamentale dans le domaine de l'in
 
 4. **Standard Template Library (STL) :** La STL est une collection de classes et de fonctions prêtes à l'emploi qui simplifient de nombreuses tâches de programmation. Elle inclut des conteneurs de données, des algorithmes de traitement, et d'autres utilitaires.
 
-- **Structure de base d'un programme C++ :**
+-   **Structure de base d'un programme C++ :**
 
 Un programme C++ typique se compose de fonctions, de classes et d'objets. La fonction `main()` est le point de départ de l'exécution du programme. Voici une structure de base :
 
@@ -35,11 +34,7 @@ int main() {
 
 Cette structure utilise la bibliothèque `<iostream>` pour la gestion des entrées/sorties. Vous pouvez ensuite déclarer des variables, créer des fonctions, et intégrer des concepts orientés objet selon les besoins de votre programme.
 
-
-
-
 ## 2. programme **Hello, World!** :
-
 
 Le programme "Hello, World!" est un programme classique utilisé pour illustrer les bases d'un langage de programmation. Voici le code en C++ pour le célèbre "Hello, World!" avec des explications détaillées pour chaque ligne :
 
@@ -57,7 +52,7 @@ int main() {
 }
 ```
 
-- **Explications détaillées :**
+-   **Explications détaillées :**
 
 1. `#include <iostream>` : Cette ligne inclut la bibliothèque iostream, qui fournit des fonctionnalités d'entrée/sortie standard en C++. La préfixe "i" dans iostream signifie "input" (entrée), et "ostream" signifie "output stream" (flux de sortie).
 
@@ -73,12 +68,9 @@ int main() {
 
 En exécutant ce programme, vous devriez voir la sortie "Hello, World!" affichée à la console.
 
-
 ## 3. **Étapes pour compiler un programme C++ avec g++ :**
 
 Compiler un programme C++ consiste à traduire le code source en langage machine exécutable compréhensible par l'ordinateur. Voici comment vous pouvez compiler un programme C++ en utilisant un compilateur comme g++ (le compilateur GNU C++).
-
-
 
 1. **Assurez-vous que g++ est installé :** Avant de commencer, assurez-vous que le compilateur g++ est installé sur votre système. Vous pouvez l'installer en utilisant le gestionnaire de paquets de votre système d'exploitation. Par exemple, sur un système basé sur Debian/Ubuntu, vous pouvez utiliser la commande suivante dans le terminal :
 
@@ -111,7 +103,7 @@ Compiler un programme C++ consiste à traduire le code source en langage machine
 
     Si la compilation se déroule sans erreur, un fichier exécutable nommé "hello" sera créé dans le même répertoire.
 
-5. **Exécutez le programme :** Après la compilation, vous pouvez exécuter le programme en utilisant la commande suivante dans le terminal :
+4. **Exécutez le programme :** Après la compilation, vous pouvez exécuter le programme en utilisant la commande suivante dans le terminal :
 
     ```bash
     ./hello
@@ -119,8 +111,7 @@ Compiler un programme C++ consiste à traduire le code source en langage machine
 
     Vous devriez voir la sortie "Hello, World!" affichée à la console.
 
-
-6. **qq options du g++ :**
+5. **qq options du g++ :**
 
     ```bash
     g++ -std=c++17 -Wall -Wextra -Werror main.cpp -o main
