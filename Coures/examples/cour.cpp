@@ -21,7 +21,7 @@ namespace second
 
 void Myfunction()
 {
-    std::cout << "Hello World !!";
+    std::cout << "Hello World !!" << std::endl;
 }
 int add(int *a, int *b);
 
@@ -99,7 +99,7 @@ int main()
     // string methodes :
     std::string msg = "sidi va à l'école!!";
     msg.length();
-    msg.empty();
+    std::cout << msg.empty();
     msg.clear();
     msg.append("append some code there");
     msg.at(0);
@@ -114,7 +114,7 @@ int main()
     }
     // random number :
     srand(time(NULL));
-    int a = (rand() % 6) + 1;
+    int nbRandom = (rand() % 6) + 1;
     // fonctions : prototype , overloaded
     Myfunction();
     // Array : introduction
@@ -125,6 +125,10 @@ int main()
     cars[1] = "car2";
     cars[2] = "car3";
     // sizeof(): size in bytes of variable
+
+    size_t len = sizeof(int);
+
+    std::cout << "sizeof of int  = " << len << std::endl;
 
     return 0;
 }
