@@ -1,6 +1,8 @@
 #ifndef _DVECTOR_H_
 #define _DVECTOR_H_
 
+#include <iostream>
+
 /**
  * \file Dvector.h
  * \brief Vector of double
@@ -26,6 +28,18 @@ public:
     Dvector();
 
     Dvector(int length, double value = 0.);
+
+    Dvector(const Dvector &autre);
+
+    Dvector(std::string chemin);
+
+    ~Dvector();
+
+    void display(std::ostream &str);
+
+    int size();
+
+    void fillRandomly();
 };
 
 #endif

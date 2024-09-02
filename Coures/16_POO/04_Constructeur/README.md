@@ -149,3 +149,81 @@
 
     -   `new Exemple()` crée un nouvel objet `Exemple` sur le tas et retourne un pointeur vers cet objet.
     -   `delete obj;` libère la mémoire allouée à l'objet et appelle son destructeur.
+
+## 4. **Le constructeur de copie:**
+
+-   **Description:**
+
+    > Le constructeur de copie en C++ est un type spécial de constructeur utilisé pour créer un nouvel objet en copiant les membres d'un objet existant. Il est appelé lorsqu'un objet est initialisé à partir d'un autre objet du même type.
+
+-   **Syntaxe du Constructeur de Copie:**
+
+    La signature du constructeur de copie est la suivante :
+
+    ```cpp
+    ClassName(const ClassName& other);
+    ```
+
+    -   **`ClassName`** : Le nom de la classe.
+    -   **`const ClassName& other`** : Une référence constante à l'objet à copier.
+
+-   **Exemple de Constructeur de Copie:**
+
+    Voici un exemple simple d'une classe `Boite` avec un constructeur de copie :
+
+    ```cpp
+    #include <iostream>
+    using namespace std;
+
+    class Boite {
+    private:
+        int* largeur;
+
+    public:
+        // Constructeur par défaut
+        Boite(int l) : largeur(new int(l)) {
+            cout << "Constructeur par défaut appelé" << endl;
+        }
+
+        // Constructeur de copie
+        Boite(const Boite& autre) : largeur(new int(*(autre.largeur))) {
+            cout << "Constructeur de copie appelé" << endl;
+        }
+
+        // Destructeur
+        ~Boite() {
+            delete largeur;
+            cout << "Destructeur appelé" << endl;
+        }
+
+        // Méthode pour afficher la largeur
+        void afficherLargeur() const {
+            cout << "Largeur: " << *largeur << endl;
+        }
+    };
+
+    int main() {
+        Boite boite1(10);      // Appel du constructeur par défaut
+        Boite boite2 = boite1; // Appel du constructeur de copie
+
+        boite1.afficherLargeur();
+        boite2.afficherLargeur();
+
+        return 0;
+    }
+    ```
+
+### RQ1 : **Quand le Constructeur de Copie est-il appelé ?**
+
+Le constructeur de copie est invoqué dans plusieurs situations :
+
+-   Lorsque vous passez un objet par valeur à une fonction.
+-   Lorsque vous retournez un objet par valeur depuis une fonction.
+-   Lorsque vous initialisez un nouvel objet avec un objet existant (par exemple, `ClassName obj2 = obj1;`).
+
+### RQ2 : **Shallow Copy vs Deep Copy**
+
+-   **Shallow Copy (Copie superficielle)** :
+    -   Copie les valeurs des membres de l'objet de manière directe, y compris les pointeurs. Si deux objets partagent un même pointeur à une ressource, cela peut entraîner des conflits de mémoire.
+-   **Deep Copy (Copie profonde)** :
+    -   Copie non seulement les valeurs des membres, mais alloue également une nouvelle mémoire pour les pointeurs et copie le contenu pointé. Chaque objet a sa propre copie de la ressource, évitant ainsi les conflits.
